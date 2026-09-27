@@ -1,6 +1,5 @@
 // Function to show notification toast messages
 function showToast(message) {
-    // Check if toast container already exists, otherwise create it
     let toastContainer = document.getElementById('toast-container');
     if (!toastContainer) {
         toastContainer = document.createElement('div');
@@ -12,12 +11,10 @@ function showToast(message) {
         document.body.appendChild(toastContainer);
     }
 
-    // Create toast element
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.textContent = message;
     
-    // Toast styling
     toast.style.backgroundColor = 'var(--primary)';
     toast.style.color = 'var(--white)';
     toast.style.padding = '12px 24px';
@@ -30,12 +27,10 @@ function showToast(message) {
 
     toastContainer.appendChild(toast);
 
-    // Fade in
     setTimeout(() => {
         toast.style.opacity = '1';
     }, 10);
 
-    // Fade out and remove after 3 seconds
     setTimeout(() => {
         toast.style.opacity = '0';
         setTimeout(() => {
@@ -44,9 +39,15 @@ function showToast(message) {
     }, 3000);
 }
 
-// Add event listeners when the DOM is fully loaded
+// Ensure DOM is fully loaded before executing scripts
 document.addEventListener('DOMContentLoaded', () => {
-    // Handle smooth scrolling and toast display for table "Book" buttons
+    // Activity 5: Dynamic content insertion using document.getElementById and textContent
+    const demoParagraph = document.getElementById('demo');
+    if (demoParagraph) {
+        demoParagraph.textContent = 'Welcome to IPL 2026! Get ready for high-octane T20 action as 10 top teams compete for the prestigious trophy across iconic stadiums in India.';
+    }
+
+    // Activity 4: Smooth scrolling & toast on Book click
     const bookButtons = document.querySelectorAll('.table-container tbody a, header a[href="#booking"]');
     
     bookButtons.forEach(button => {
@@ -55,10 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const bookingSection = document.getElementById('booking');
             if (bookingSection) {
-                // Smooth scroll to booking form
                 bookingSection.scrollIntoView({ behavior: 'smooth' });
-                
-                // Trigger toast notification
                 showToast('Navigated to ticket booking form!');
             }
         });
