@@ -1,0 +1,92 @@
+.auth-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-hero {
+  background: var(--primary, #E2B4BD);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-buttons button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #fff;
+  color: var(--primary, #E2B4BD);
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.split-section {
+  display: flex;
+  min-height: 350px;
+  border-bottom: 2px solid #ddd;
+}
+
+.left-half {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-half {
+  width: 50%;
+}
+
+.solid-bg {
+  background-color: var(--accent, #F7D6D0);
+}
+
+.solid-bg-alt {
+  background-color: #d0e1f9;
+}
+
+.padded-section {
+  padding: 60px 40px;
+  background-color: #fff;
+}
+
+.two-column-form {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.column-left, .column-right {
+  flex: 1;
+}
+
+.small-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  z-index: 9999;
+}
